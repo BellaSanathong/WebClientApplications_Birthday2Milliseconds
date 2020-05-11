@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+  <script>
+    var departTime = new Date(1999, 3, 5, 00, 00);
+    var year = departTime.getFullYear();
+    var month = departTime.getMonth() +1;
+    var day = departTime.getDate();
+    
+    var now = new Date ();
+    var birthday = new Date(now);
+    birthday.setMonth(3);
+    birthday.setDate(5);
+    birthday.setFullYear( birthday.getFullYear() + 1 );
+    
+    var timeLeft = birthday.getTime() - now.getTime();
+    var daysLeft = Math.ceil( timeLeft / 86400000 );
+    
+    var message = "There ";
+    if (daysLeft == 1) {
+      message += "is one day";
+    }
+    else {
+      message += "are " + daysLeft = " days";
+    }
+    message += " left until your birthday.";
+  </script>
+</body>
+
+</html>
